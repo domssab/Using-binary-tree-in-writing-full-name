@@ -11,7 +11,7 @@ class BinarySearchTreeNode:
         if data < self.data:
             # add data in left subtree
             if self.left:
-                self.left,add_child(data)
+                self.left.add_child(data)
             else:
                 self.left = BinarySearchTreeNode(data)
         else:
@@ -43,7 +43,7 @@ class BinarySearchTreeNode:
         if val < self.data:
             # val might be in left subtree
             if self.left:
-                self.left.search(val)
+                return self.left.search(val)
             else:
                 return False
 
@@ -65,4 +65,5 @@ def build_tree(elements):
 if __name__ == '__main__':
     letters = ['C', 'H', 'A', 'N', 'T', 'A', 'L', 'D', 'O', 'M', 'I', 'N', 'I', 'Q', 'U', 'E', 'C', 'S', 'A', 'B', 'A', 'L', 'L', 'O']
     letters_tree = build_tree(letters)
-    print(numbers_tree,search(A))
+    print(letters_tree.in_order_traversal())
+    print(letters_tree.search('A'))
