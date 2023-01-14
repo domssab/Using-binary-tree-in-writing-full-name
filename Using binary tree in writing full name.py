@@ -63,6 +63,6 @@ def build_tree(elements):
     return root
 
 if __name__ == '__main__':
-    letters = ['C', 'H', 'A', 'N', 'T', A, L, D, O, M, I, N, I, Q, U, E, C, S, A, B, A, L, L, O]
+    letters = ['C', 'H', 'A', 'N', 'T', 'A', 'L', 'D', 'O', 'M', 'I', 'N', 'I', 'Q', 'U', 'E', 'C', 'S', 'A', 'B', 'A', 'L', 'L', 'O']
     letters_tree = build_tree(letters)
     print(numbers_tree,search(A))
