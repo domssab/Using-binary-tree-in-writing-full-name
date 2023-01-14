@@ -8,3 +8,9 @@ class BinarySearchTreeNode:
         if data == self.data:
             return
 
+        if data < self.data:
+            # add data in left subtree
+            if self.left:
+                pass
+            else:
+                self.left = BinarySearchTreeNode(data)
