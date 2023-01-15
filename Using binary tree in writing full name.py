@@ -103,3 +103,5 @@ if __name__ == '__main__':
     numbers_tree = build_tree(numbers)
     numbers_tree.delete(20)
     print("After deleting 20", numbers_tree.in_order_traversal())
+    print("Min is: ", numbers_tree.find_min())
+    print("Max is: ", numbers_tree.find_max())
