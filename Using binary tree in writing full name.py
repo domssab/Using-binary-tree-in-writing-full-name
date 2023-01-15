@@ -79,6 +79,13 @@ class BinarySearchTreeNode:
             if self.right is None:
                 return self.right
 
+            min_val = self.right.find_min()
+            self.data = min_val
+            self.right = self.right.delete(min_val)
+
+        return self
+
+
 def build_tree(elements):
     root = BinarySearchTreeNode(elements[0])
 
@@ -92,3 +99,7 @@ if __name__ == '__main__':
     letters_tree = build_tree(letters)
     print(letters_tree.in_order_traversal())
     print(letters_tree.search('C'))
+    numbers = [17, 4, 1, 20, 9, 23, 18, 34]
+    numbers_tree = build_tree(numbers)
+    numbers_tree.delete(20)
+    print("After deleting 20", numbers_tree.in_order_traversal())
